@@ -7,7 +7,7 @@ function Initial() {
 	const [categories, setCategories] = useState([]);
 	const [TotalPages, setTotalPages] = useState();
 
-	const pag = useRef(0);
+	const pag = useRef(1);
 	const loadMore=() =>{
 		fetch(`https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=${pag.current}`)
 		.then((res) => { 
@@ -15,7 +15,6 @@ function Initial() {
 			setTotalPages(Pages)
 			return res.json()})
 		.then((data) => {
-			console.log(data);
 			pag.current++
 			setCategories([...categories, ...data]);
 		})
@@ -23,10 +22,11 @@ function Initial() {
 
 	const getPosts = () => {
 		fetch('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518')
-		.then((res) => res.json())
+		.then((res) => {
+			const Pages = res.headers.get('X-WP-TotalPages')
+			setTotalPages(Pages)
+			return res.json()})
 		.then((data) => {
-			console.log(data);
-			pag.current++;
 			setCategories(data);
 		})
 	}
@@ -65,7 +65,7 @@ function Initial() {
 		
 	<div className="initialBoxButton">
 		<section className='initialButtonNext'> 
-			<p className='initialTextFooter'>Exibindo página {pag.current} / {TotalPages}</p>
+			<p className='initialTextFooter'>Exibindo {pag.current} / {TotalPages}</p>
 			<button onClick={loadMore} className="initialTextButton"> Ver mais </button>
 		</section>
 	</div>
