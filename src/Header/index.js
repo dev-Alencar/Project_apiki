@@ -1,5 +1,5 @@
 import  logo  from '../Assets/logo-apiki.webp'
-import './index-header.css'
+import './index.css'
 
 function Header() {
 

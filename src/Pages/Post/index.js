@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-
+import HTMLReactParser from 'html-react-parser'
 function Post() {
 	const [post, setPost] = useState([]);
 	const { slug } = useParams();
@@ -24,10 +24,21 @@ function Post() {
 			{ post.map((item, index) => <span key={index}> {item.title.rendered} </span>
 			)}
 		</div>
-		<div>
-			{ post.map((item, index) => <p key={index}> {item.content.rendered} </p>
+
+		<div> 
+			{ post.map((item, index) => <img key={index} src={item.yoast_head_json.og_image[0].url} />
 			)}
 		</div>
+
+		<div>
+			{ 
+			
+			post.map((item, index) => <p key={index}> {HTMLReactParser(item.content.rendered)} 
+			</p>)
+			
+			}
+		</div>
+
 	</div>
   );
 }
