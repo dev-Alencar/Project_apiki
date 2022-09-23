@@ -1,0 +1,23 @@
+div{
+    /* padding: 0 10px 10px 10px; */
+}
+.postBoxContent{
+    margin: 40px 20px 0 20px;
+}
+
+.PostTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.postBoxContentInto{
+    display: flex;
+    justify-content: center;
+}
+.postImage {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    width: 150vh;
+    border-radius: 10px
+}

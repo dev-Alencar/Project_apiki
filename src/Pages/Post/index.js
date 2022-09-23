@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import HTMLReactParser from 'html-react-parser'
+import './index.css'
 function Post() {
 	const [post, setPost] = useState([]);
 	const { slug } = useParams();
@@ -18,15 +19,14 @@ function Post() {
 	}, []);
 
   return (
-	<div>
-		titulo:
+	<div className='postBoxContent'>
 		<div>
-			{ post.map((item, index) => <span key={index}> {item.title.rendered} </span>
+			{ post.map((item, index) => <h1 key={index} className="PostTitle"> {item.title.rendered} </h1>
 			)}
 		</div>
 
-		<div> 
-			{ post.map((item, index) => <img key={index} src={item.yoast_head_json.og_image[0].url} />
+		<div className="postBoxContentInto"> 
+			{ post.map((item, index) => <img key={index} src={item.yoast_head_json.og_image[0].url} className="postImage"  />
 			)}
 		</div>
 

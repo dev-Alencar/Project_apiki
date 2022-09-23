@@ -27,7 +27,31 @@
 }
 
 .initial-image {
-    width: 80vh;
-   align-items: center;
+   width: 150vh;
    border-radius: 10px
+}
+
+.initialBoxButton {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.initialButtonNext {
+    flex-direction: column; 
+}
+
+.initialTextFooter {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.initialTextButton {
+    width: 20vh;
+    height: 10vh;
+    margin-left: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(28, 28, 157);
 }

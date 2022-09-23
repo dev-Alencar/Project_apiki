@@ -62,11 +62,14 @@ function Initial() {
 				)
 			}
 		</section>
-
-		<section> 
-			<p>Exibindo página {pag.current} / {TotalPages}</p>
-			<button onClick={loadMore}> Ver mais </button>
+		
+	<div className="initialBoxButton">
+		<section className='initialButtonNext'> 
+			<p className='initialTextFooter'>Exibindo página {pag.current} / {TotalPages}</p>
+			<button onClick={loadMore} className="initialTextButton"> Ver mais </button>
 		</section>
+	</div>
+		
 	</div>
   );
 }

@@ -4,7 +4,7 @@
  }
  .header-section { 
      background-color:rgb(44, 44, 185);
-     max-width:  100%;
+     max-width:  auto;
      height: 1px;
      margin-bottom: 50px;
  }
