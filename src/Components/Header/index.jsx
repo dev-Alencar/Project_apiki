@@ -6,10 +6,10 @@ function Header() {
   return (
 	<div>
 		<header>
-			<img src={logo} alt="logo" className='header-logo'/>
+			<img src={logo} alt="logo" className='header__logo'/>
 		</header>
 		<div> 
-			<section className='header-section'></section>
+			<section className='header__section'></section>
 		</div>
 	</div>
   );

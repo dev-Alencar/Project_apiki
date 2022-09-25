@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
 import './index.css';
 
-function BoxPost({title, slug, img}) {
+function BoxPost({ title, slug, img }) {
 
 	return (
-		<div className="initial-box">
+		<div className="box-post">
 
 			<div>
-				<h1 className="initial-box__title"> {title} </h1>
+				<h1 className="box-post__title"> {title} </h1>
 
 				<br />
 
-				<Link target={'_blank'} to={`post/${slug}`} className="initial-box__title-link">
-					<img src={img} alt='imagems' className='initial-box__image' />
+				<Link target={'_blank'} to={`post/${slug}`} className="box-post__title-link">
+					<img src={img} alt='imagems' className='box-post__image' />
 				</Link>
 				<br />
 

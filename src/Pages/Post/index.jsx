@@ -22,7 +22,7 @@ function Post() {
 	}, []);
 
   return (
-	<div className='postBoxContent'>
+	<div>
 		<header>
 			<Header/>
 		</header>

@@ -1,20 +1,3 @@
-.PostTitle {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-}
-
-.postBoxContentInto{
-    display: flex;
-    justify-content: center;
-}
-.postImage {
-    margin-top: 30px;
-    margin-bottom: 60px;
-    width: 150vh;
-    border-radius: 10px;
-}
-
 .postBoxContentParagraph {
     margin: 0 auto;
     max-width: 700px;
